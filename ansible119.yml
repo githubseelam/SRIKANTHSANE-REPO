@@ -1,0 +1,13 @@
+---
+- hosts: 172.31.16.204
+  become: yes
+  tasks:
+    - name: install java
+      apt:
+        name: openjdk-8-jdk
+        state: present
+    - name: install apache
+      apt:
+        name: apache2
+        state: present
+   
